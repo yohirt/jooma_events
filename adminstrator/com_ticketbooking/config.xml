@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <fieldset
+        name="events"
+        label="COM_CONFIG_EVENT_FIELDSET_LABEL"
+        description="COM_CONFIG_PRODUCTS_LIST_FIELDSET"
+    >
+        <field
+            name="list_style"
+            type="list"
+            default="list"
+            label="COM_CONFIG_LIST_STYLE_LABEL"
+            description="COM_CONFIG_LIST_STYLE">
+            <option value="list">COM_TICKETBOOKING_FIELD_VALUE_LIST</option>
+            <option value="paragraphs">COM_TICKETBOOKING_FIELD_VALUE_PARAGRAPHS</option>
+        </field>
+    </fieldset>
+</config>

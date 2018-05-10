@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<metadata>
+    <layout title="COM_TICKETBOOKING_ALLEVENTS_VIEW_TITLE">
+        <message>
+            COM_TICKETBOOKING_ALLEVENTS_VIEW_DESC
+        </message>
+    </layout>
+    
+    <fields name="params">
+        <fieldset 
+            name="events"
+            label="Label"
+            description="description"
+        >
+            <field
+                name="list_style"
+                type="list"
+                default=""
+                label="alabel field"
+                description="description field">
+                <option value="">JOMGLOBAL_USE_GLOBAL</option>
+                <option value="list">Wartość pierwsza default xml</option>
+                <option value="paragraphs">Wartość druga default xml</option>
+            </field>
+        </fieldset>
+            
+    </fields>
+</metadata>

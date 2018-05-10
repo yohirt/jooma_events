@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form >
+
+    <fieldset name="basic">
+        <field name="wydarzenieID"
+               type="hidden"
+               label="JGLOBAL_FIELD_ID_LABEL"
+               description="JGLOBAL_FIELD_ID_DESCRIPTION"
+               size="10"
+               default="0"
+               readonly="true"
+               class="readonly"
+        />
+        <field name="nazwa_wydarzenia"
+               type="text"
+               label="COM_TICKETBOOKING_NAME_EVENTS"
+               description="COM_TICKET_BOOKING_EVENT_NAME_DESC"
+               size="30"
+               class="inputbox"
+               required="false"
+        />
+        <field name="miejsce_wydarzenia"
+               type="text"
+               label="COM_TICKET_BOOKING_FIELD_EVENT_SPACE_LABEL"
+               description="COM_TICKET_BOOKING_EVENT_SPACE_DESC"
+               size="30"
+               class="inputbox"
+               required="false"
+        />
+        <field name="data_wydarzenia"
+               type="calendar"
+               label="COM_TICKET_FIELD_EVENT_DATE"
+               description="COM_TICKET_BOOKING_EVENT_DATE_DESC"
+               required="false"
+        >
+            
+        </field>
+        <field name="czas_wydarzenia"
+               type="text"
+               label="COM_TICKET_BOOKING_FIELD_EVENT_TIME_LABEL"
+               description="COM_TICKET_BOOKING_EVENT_TIME_DESC"
+               size="30"
+               class="inputbox"
+               required="false"
+        />
+        <field name="published"
+               type="list"
+               label="JSTATUS"
+               description="JFIELD_PUBLISHED_DESC"
+               size="1"
+               class="inputbox"
+               filter="intval"
+               required="true"
+        >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+
+        <field name="image_event" 
+               type="media"
+               default="" 
+               label="Wybierz obrazek 150x150px" 
+               description="COM_TICKET_BOOKING_EVENT_IMAGE_DESC"
+               directory="components\com_ticketbooking\images" 
+               exclude="" 
+               stripext="" />
+
+    </fieldset>
+    <fieldset name="editor">
+        <field name="opis_wydarzenia"
+               type="editor"
+               label="COM_TICKET_BOOKING_FIELD_EVENT_DESC_LABEL"
+               description="COM_TICKET_BOOKING_EVENT_DESC_DESC"
+               class="inputbox"
+               filter="safehtml"
+        />
+    </fieldset>
+</form>

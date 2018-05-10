@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.2.0" method="upgrade">
+	
+	<name>TicketBooking</name>
+	<!-- The following elements are optional and free of formatting constraints -->
+	<creationDate>Wrzesień 2016</creationDate>
+	<author>Rafał Taraszka</author>
+	<authorEmail>rtaraszka@poczta.fm</authorEmail>
+	<authorUrl>http://www.eRTe.net.pl</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<!--  The version string is recorded in the components table -->
+	<version>0.0.5</version>	<!-- The description is optional and defaults to the name -->
+	<description>Część komponentu TicketBooking - Wydarzenia</description>
+	
+	<install> <!-- Runs on install -->
+		<sql>			
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>	
+	</install>	
+	
+	<uninstall> <!-- Runs on uninstall -->		
+		<sql>			
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>		
+		</sql>
+	</uninstall>
+	<update> <!-- Runs on update; New since J2.5 -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	
+	<!-- Site Main File Copy Section -->
+	<!-- Note the folder attribute: This attribute describes the folder
+		to copy FROM in the package to install therefore files copied
+	in this section are copied from /site/ in the package -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>ticketbooking.php</filename>
+		<filename>controller.php</filename>		
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>images</folder>
+	</files>
+	
+	
+	<media destination="com_ticketbooking" folder="media">
+		<folder>css</folder>
+	</media>
+	
+	<administration>
+		<languages folder="/administrator/language/pl-PL">
+			<language tag="pl-PL">pl-PL.com_ticketbooking.ini</language>
+			<language tag="pl-PL">pl-PL.com_ticketbooking.sys.ini</language>
+			
+		</languages>
+		<!-- Administration Menu Section -->
+		<menu link='option=com_ticketbooking&amp;view=events'>COM_ICKET_BOOKING_WYDARZENIA</menu>
+		<submenu>
+			<menu link="option=com_ticketbooking&amp;view=events">EDIT_EVENTS</menu>
+		</submenu>
+		<!-- Administration Main File Copy Section -->
+		<!-- Note the folder attribute: This attribute describes the folder
+			to copy FROM in the package to install therefore files copied
+		in this section are copied from /admin/ in the package -->
+		<files folder="admin">
+			
+			<!-- Admin Main File Copy Section -->
+			<filename>index.html</filename>
+			<filename>ticketbooking.php</filename>
+			<filename>controller.php</filename>
+			<filename>config.xml</filename>
+			<!-- SQL files section -->
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>models</folder>
+			<folder>controllers</folder>
+			<folder>views</folder>
+			
+		</files>
+	</administration>
+	
+</extension>
